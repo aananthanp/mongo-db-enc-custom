@@ -15,16 +15,6 @@ public class StartUp implements ApplicationListener<ApplicationReadyEvent> {
 
     @Override
     public void onApplicationEvent(ApplicationReadyEvent event) {
-        System.out.println("StartUp...");
-        FailedMessageDoc messageDoc = FailedMessageDoc.builder()
-                .id(null)
-                .logTime(new Date())
-                .payload("sample payload")
-                .countryCode("test")
-                .messageType("test")
-                .status("INSERTED")
-                .build();
-        System.out.println("Insert status :" + failedMessageRepository.insert(messageDoc));
 
     }
 }

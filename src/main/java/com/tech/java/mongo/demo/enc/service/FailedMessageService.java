@@ -5,7 +5,7 @@ import com.tech.java.mongo.demo.enc.model.FailedMessageDoc;
 import com.tech.java.mongo.demo.enc.repository.FailedMessageRepository;
 import org.springframework.stereotype.Service;
 
-import java.util.Date;
+import java.util.List;
 
 @Service
 public class FailedMessageService {
@@ -20,7 +20,11 @@ public class FailedMessageService {
         return repository.save(doc);
     }
 
-    public FailedMessageDoc getMessage(String id) {
+    public List<FailedMessageDoc> getAll() {
+        return repository.findAll();
+    }
+
+    public FailedMessageDoc getById(String id) {
         return repository.findById(id).orElse(null);
     }
 }

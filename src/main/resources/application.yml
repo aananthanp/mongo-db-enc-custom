@@ -1,0 +1,20 @@
+server:
+  port: 8080
+
+springdoc:
+  api-docs:
+    path: /v3/api-docs
+  swagger-ui:
+    path: /swagger-ui.html
+spring:
+  data:
+    mongodb:
+      host: localhost
+      port: 27017
+      database: failed-payload
+      uri: mongodb://localhost:27017/failed-payload
+
+app:
+  encryption:
+    secret: thisismysoltkeyformy_aes_32bytes
+    #my-super-secret-32-char-key-1234
